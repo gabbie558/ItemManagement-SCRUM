@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="mainStyle.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <input type="text" id="searchInput" placeholder="Search Items" onkeyup="searchItems()">
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Top Navbar -->
+            <div class="top-navbar">
+                <button class="add-item-btn">Add Item</button>
+            </div>
+
+            <!-- Table of Available Items -->
+            <div class="table-container">
+                <h2>All Available Items</h2>
+                <table id="itemsTable">
+                    <thead>
+                        <tr>
+                            <th>Item ID</th>
+                            <th>Item Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Item A</td>
+                            <td>$10</td>
+                            <td>50</td>
+                            <td>Category 1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Item B</td>
+                            <td>$15</td>
+                            <td>30</td>
+                            <td>Category 2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Item C</td>
+                            <td>$20</td>
+                            <td>20</td>
+                            <td>Category 1</td>
+                        </tr>
+                        <!-- Add more items here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchItems() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("itemsTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none"; // Hide the row initially
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = ""; // Show the row if search term matches
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
 
