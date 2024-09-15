@@ -1,8 +1,8 @@
 Change Logs
 I. Sprint Planning
-September 7 2024: Created Product Backlog
+September 7 2024: Created Product Backlog(refer to pdf file for more info)
 II. Sprint 1
-September 9,2024: Chosen User Story 1.1 and 2.1
+September 9,2024: Chosen User Story 1.1 and 2.1 for Sprint 1
 
 September 11, 2024: Daily Scrum 1
 	- Progress Report on LoginPage and MainPage (Epistola)
