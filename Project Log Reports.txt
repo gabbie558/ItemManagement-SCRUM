@@ -1,0 +1,16 @@
+Change Logs
+I. Sprint Planning
+September 7 2024: Created Product Backlog
+II. Sprint 1
+September 9,2024: Chosen User Story 1.1 and 2.1
+
+September 11, 2024: Daily Scrum 1
+	- Progress Report on LoginPage and MainPage (Epistola)
+	- Discussed on when will be Uploaded to Github
+	- Discussed on who will take on the BackEnd of the Project  
+	- Continue working on the FrontEnd of LoginPage and MainPage (Epistola)
+	- Obstacles we are currently facing is that some members have little 
+	knowledge of either HTML,CSS and requires extensive self-learning to follow up
+
+September 15,2024: Repository Created in Github by Epistola
+	-Uploaded both LoginPage and MainPage 
