@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Management System</title>
+    <link rel="stylesheet" href="mainStyles.css">
+    <script src="mainScript.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Item Management System</div>
+    </div>
+
+    <!-- Container for table -->
+    <div class="container">
+
+        <!-- Search Bar and Button -->
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" id="searchBar" placeholder="Search by name or category" onkeyup="searchItems()">
+                <button id="searchButton">Search</button>
+            </div>
+            <!-- Add Item Button inside the container -->
+            <button class="add-item-button">Add Item</button>
+        </div>
+
+        <!-- Table for items -->
+        <table id="itemTable">
+            <thead>
+                <tr>
+                    <th>Item Number</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Test Item 1-->
+                <tr>
+                    <td>0001</td>
+                    <td>Item 1</td>
+                    <td>P 10.00</td>
+                    <td>20</td>
+                    <td>Electronics</td>
+                    <td class="action-buttons">
+                        <button>Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <!-- Test Item 2-->
+                <tr>
+                    <td>0002</td>
+                    <td>Item 2</td>
+                    <td>P 15.00</td>
+                    <td>10</td>
+                    <td>Clothing</td>
+                    <td class="action-buttons">
+                        <button>Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
+
+
+

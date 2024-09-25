@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            overflow: hidden;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+        .container {
+            display: flex; 
+            justify-content: center;  /* Centers horizontally */
+            align-items: center;      /* Centers vertically */
+            height: 100vh;            
+        }
+        .image-container {
+            width: 0%;              /* Width of the image part */
+            height: 100%;
+            background-image: url('/mnt/data/image.png'); /* Assuming the image is used here */
+            background-size: cover;
+            background-position: center;
+        } 
+        .login-container {
+            width: 30%;               /* Width of the login part */
+            background: rgba(255, 255, 255, 0.13);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+        .login-form img {
+            width: 150px; /* Adjust the size of the logo */
+            margin-bottom: 20px;
+        }
+        .login-form h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fffafa; /* Adjusted color for aesthetics */
+        }
+        .login-form h2 {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #9b9b99; /* Adjusted color for aesthetics */
+        }
+        .login-form input {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form .forgot-password {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px; /* Adjusted margin */
+        }
+        .login-form .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .login-form button {
+            padding: 10px;
+            font-size: 16px;
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Button will now take full width */
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container"></div>
+    <div class="login-container">
+        <form class="login-form" onsubmit="login(event)">
+            <h1>Group 3</h1>
+            <h2>Item Management System</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <button type="submit">LOGIN</button>
+        </form>
+    </div>
+    </div>
+    <script>
+        function login(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            // Replace these with your actual username and password check
+            const validUsername = 'admin';
+            const validPassword = 'admin';
+            if (username === validUsername && password === validPassword) {
+                window.location.href = 'MainPage.html';
+            } else {
+                alert('Invalid username or password');
+            }
+        }
+    </script>
+</body>
+</html>
+
