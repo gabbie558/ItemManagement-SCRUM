@@ -3,94 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory Management</title>
-    <link rel="stylesheet" href="mainStyle.css">
+    <title>Item Management System</title>
+    <link rel="stylesheet" href="mainStyles.css">
+    <script src="mainScript.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Sidebar -->
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li>
-                    <input type="text" id="searchInput" placeholder="Search Items" onkeyup="searchItems()">
-                </li>
-            </ul>
-        </nav>
 
-        <!-- Main content -->
-        <div class="main-content">
-            <!-- Top Navbar -->
-            <div class="top-navbar">
-                <button class="add-item-btn">Add Item</button>
-            </div>
-
-            <!-- Table of Available Items -->
-            <div class="table-container">
-                <h2>All Available Items</h2>
-                <table id="itemsTable">
-                    <thead>
-                        <tr>
-                            <th>Item ID</th>
-                            <th>Item Name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Category</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Item A</td>
-                            <td>$10</td>
-                            <td>50</td>
-                            <td>Category 1</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Item B</td>
-                            <td>$15</td>
-                            <td>30</td>
-                            <td>Category 2</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Item C</td>
-                            <td>$20</td>
-                            <td>20</td>
-                            <td>Category 1</td>
-                        </tr>
-                        <!-- Add more items here -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Item Management System</div>
     </div>
 
-    <script>
-        function searchItems() {
-            var input, filter, table, tr, td, i, j, txtValue;
-            input = document.getElementById("searchInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("itemsTable");
-            tr = table.getElementsByTagName("tr");
+    <!-- Container for table -->
+    <div class="container">
 
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 1; i < tr.length; i++) {
-                tr[i].style.display = "none"; // Hide the row initially
-                td = tr[i].getElementsByTagName("td");
-                for (j = 0; j < td.length; j++) {
-                    if (td[j]) {
-                        txtValue = td[j].textContent || td[j].innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = ""; // Show the row if search term matches
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+        <!-- Search Bar and Button -->
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" id="searchBar" placeholder="Search by name or category" onkeyup="searchItems()">
+                <button id="searchButton">Search</button>
+            </div>
+            <!-- Add Item Button inside the container -->
+            <button class="add-item-button">Add Item</button>
+        </div>
+
+        <!-- Table for items -->
+        <table id="itemTable">
+            <thead>
+                <tr>
+                    <th>Item Number</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Test Item 1-->
+                <tr>
+                    <td>0001</td>
+                    <td>Item 1</td>
+                    <td>P 10.00</td>
+                    <td>20</td>
+                    <td>Electronics</td>
+                    <td class="action-buttons">
+                        <button>Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <!-- Test Item 2-->
+                <tr>
+                    <td>0002</td>
+                    <td>Item 2</td>
+                    <td>P 15.00</td>
+                    <td>10</td>
+                    <td>Clothing</td>
+                    <td class="action-buttons">
+                        <button>Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
+
+
+
 
