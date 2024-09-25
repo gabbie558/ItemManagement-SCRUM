@@ -3,7 +3,9 @@ Change Logs
 I. Sprint Planning
 September 7 2024: Created Product Backlog(refer to pdf file for more info)
 II. Sprint 1
-September 9,2024: Chosen User Story 1.1 and 2.1 for Sprint 1
+September 9,2024: Chosen User Stories for Sprint 1
+	1. User Authentication 1.1 and 
+	2. Item Management System 2.1 
 
 September 11, 2024: Daily Scrum 1
 	- Progress Report on LoginPage and MainPage (Epistola)
@@ -14,4 +16,10 @@ September 11, 2024: Daily Scrum 1
 	knowledge of either HTML,CSS and requires extensive self-learning to follow up
 
 September 15,2024: Repository Created in Github by Epistola
-	-Uploaded both LoginPage and MainPage 
+		-Uploaded both LoginPage and MainPage 
+
+September 22 ,2024: Daily Scrum 2
+	- NO progress was made due to Prelim Exam
+	- User Story 2.1 has not yet started and Main Page is not yet updated(still barebones)
+	- Fixed some issues due no proper communication and clear roles
+	- Plan to finished Sprint 1 at the end of the week( September 29)
