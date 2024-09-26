@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 async function fetchItems() {
-    const response = await fetch('https://localhost/item_management/items.php');
+    const response = await fetch('http://localhost/item_management/items.php');
     const item = await response.json();
 
     const tableBody = document.querySelector("#itemTable tBody");
@@ -82,7 +82,7 @@ async function editItem(id) {
         fetchItems();
 }
 async function deleteItem(id) {
-    await fetch(`https://localhost/item_management/items.php?id=${id}`,{
+    await fetch(`http://localhost/item_management/items.php?id=${id}`,{
         method: 'DELETE'
     });
     fetchItems();
